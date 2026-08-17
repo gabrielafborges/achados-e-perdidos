@@ -1,7 +1,6 @@
 <?php
-// =============================================================================
-// ACHADOS E PERDIDOS IFMG - CADASTRO DE ITEM (CADASTRAR_ITEM.PHP)
-// =============================================================================
+// CADASTRO DE ITEM (CADASTRAR_ITEM.PHP)
+
 header('Content-Type: text/html; charset=UTF-8');
 require_once __DIR__ . '/../config/db.php';
 
