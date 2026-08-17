@@ -1,7 +1,5 @@
 <?php
-// =============================================================================
-// ACHADOS E PERDIDOS IFMG - DASHBOARD PRINCIPAL (INDEX.PHP)
-// =============================================================================
+// DASHBOARD PRINCIPAL (INDEX.PHP)
 header('Content-Type: text/html; charset=UTF-8');
 session_start();
 require_once __DIR__ . '/../config/db.php';
@@ -22,9 +20,7 @@ if ($redis && isset($_SESSION['user_name'])) {
     } catch (Exception $e) {}
 }
 
-// -----------------------------------------------------------------------------
 // CONSULTA DE ITENS
-// -----------------------------------------------------------------------------
 if (!empty($searchQuery) || !empty($categoriaFilter)) {
     $cacheKey = "cache:busca:" . md5($searchQuery . "|" . $categoriaFilter);
     
@@ -87,9 +83,8 @@ if (!empty($searchQuery) || !empty($categoriaFilter)) {
 // Total de itens zerado se nao houver registros no banco
 $totalItensCadastrados = count($itemsList);
 
-// -----------------------------------------------------------------------------
+
 // METRICAS DO REDIS
-// -----------------------------------------------------------------------------
 $rankingLocais = [];
 $totalFila = 0;
 $totalOnline = 0;
