@@ -1,7 +1,6 @@
 <?php
-// =============================================================================
-// ACHADOS E PERDIDOS IFMG - GERENCIAMENTO DE FILA REDIS (ADMIN_FILA.PHP)
-// =============================================================================
+
+// GERENCIAMENTO DE FILA REDIS (ADMIN_FILA.PHP)
 header('Content-Type: text/html; charset=UTF-8');
 require_once __DIR__ . '/../config/db.php';
 
